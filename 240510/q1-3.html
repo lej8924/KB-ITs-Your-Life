@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>증가, 감소, 종료</h2>
+    <script>
+        let cnt = 0;
+        a = prompt("1)증가 2)감소 3)종료");
+        while(true){
+            if (a==1){
+                cnt ++;
+            }else if(a==2){
+                cnt --;
+            }else if(a==3){
+                break}
+            a = prompt("1)증가 2)감소 3)종료");
+        }
+        alert("프로그램 종료 >> 현재까지의 카운트는 "+ cnt);
+    </script>
+</body>
+</html>

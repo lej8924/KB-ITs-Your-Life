@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre><script>
+        let date = new Date();
+        month = date.getMonth() + 1;
+        day = date.getDay();
+        year = date.getFullYear();
+
+        if (year >= 2000){
+            document.writeln(year + "년 밀레니엄 세대시군요.");
+        }else{
+            document.writeln(year + "년 밀레니엄 세대가 아니시군요.");
+        }
+        /////////////
+        if (day == 0 || day == 6){
+            document.writeln(month + ">>> 쉬~~~~~~~자");
+        }else{
+            document.writeln(month + ">>> 열~~~심히 공부하자");
+        }
+        /////////////
+        if (month == 2){
+            document.writeln(month +">>> 28일까지");
+        }else if (month == 4 || month == 6 || month == 9 || month == 11){
+            document.writeln(month +">>> 30일까지");
+        }else{
+            document.writeln(month +">>> 31일까지");
+        }
+
+    </script>
+</pre>
+</body>
+</html>

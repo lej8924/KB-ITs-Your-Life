@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color:deepskyblue;
+            color:white;
+            border-radius: 3px;
+            border: 0px;
+        }
+        .redline{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function chat(){
+            tmp = document.getElementById("mychat").value;
+            result.innerHTML += tmp + "<hr class='redline'>";
+        }
+    </script>
+    <h2>그림을 본 느낌은?</h2>
+    <img src="./dessert.jpg" width="200px">
+    <br>
+    <input type="text" id="mychat"><button onclick="chat()">댓글 달기</button>
+    <hr>
+    <div id="result"></div>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            display: grid;
+            row-gap: 10px;
+            column-gap: 10px;
+            grid-template-columns: 100px 100px 100px;
+        
+            background-color: blanchedalmond;
+        }
+        .menu{
+            background-color: hotpink;
+            padding-top: 20px;
+            width:210px;
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row: 1/2;
+           
+        }
+        .id2, .id1{
+            grid-row: 2/2;
+            width:100px;
+            height: auto;
+            border: 1px solid black;
+        }
+        .id3{
+            grid-row: 1;
+            grid-column: 3/3;
+            width:100px;
+            border: 1px solid black;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+
+        <div class="menu" style="border:1px solid black;">
+            <b>오늘의 할인 메뉴는?</b>
+        </div>
+        <img src="./food-2.png" class="id1">
+        <img src="./food-3.png" class="id2">
+
+        <img src="./food-1.png" class="id3">
+
+        
+    </div>
+</body>
+</html>

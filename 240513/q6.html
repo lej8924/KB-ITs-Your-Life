@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            margin-top: 4px;
+            background-color: orange;
+            border: 0px;
+            border-radius: 2px;
+            height: 30px;
+        }
+        .b{
+            margin-top: 4px;
+            background-color:cornflowerblue;
+            color:white;
+            border: 0px;
+            border-radius: 2px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function check_id(){
+            id = document.getElementById("user_id").value;
+            var arr = ['root', 'admin', 'apple']; 
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]==id){
+                    res1.innerHTML="<font color=red>이미 사용 중인 ID입니다.다른 ID를 선택해주세요.</font>";
+                    return
+                }
+            }
+            res1.innerHTML="<font color=red>사용 가능한 ID입니다.</font>";
+
+        }
+
+        function check_phone(){
+            phone = document.getElementById("phone").value;
+            tmp = phone.substr(0,3)
+            auth = ""
+            if(tmp == "010"){
+                auth += "01";
+            }
+            else if(tmp == "011"){
+                auth += "02";
+            }
+            else{
+                auth += "03";
+            }
+
+            const randomNum = Math.floor((Math.random() * (999 - 100)) + 100);
+
+            res2.innerHTML = "인증번호 : " + auth + randomNum;
+        }
+    </script>
+
+    ID 입력:<br>
+    <input type="text" id="user_id"><br>
+    <button class="a" onclick="check_id()">회원가입시 ID 중복 체크</button>
+    <div id="res1"></div>
+    <br><br><br>
+    전화번호 입력:<br>
+    <input type="text" id="phone"><br>
+    <button class="b" onclick="check_phone()">인증번호 받기</button>
+    <div id="res2"></div>
+</body>
+</html>

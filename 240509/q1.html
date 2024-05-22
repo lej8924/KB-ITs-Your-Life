@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:100px;
+            width:300px;
+        }
+        @media screen and (max-width:767px){
+            .small{
+                background-color: greenyellow;
+                color:deeppink;
+                border: 1px solid black;
+            }
+            .b, .c{
+                visibility: hidden;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:959px){
+            .small{
+                background-color: black;
+                color:deeppink;
+            }
+            .a, .c{
+                visibility: hidden;
+            }
+        }
+        @media screen and (min-width: 960px) {
+            .small{
+                background-color: yellow;
+                color:deeppink;
+            }
+            .b, .a{
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="small">
+        <h2 class="a">난 그린핑크</h2>
+        <h2 class="b">난 블랙핑크</h2>
+        <h2 class="c">난 옐로우핑크</h2>
+    </div>
+    <img src="./bp.jpg">
+    
+</body>
+</html>

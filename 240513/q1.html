@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+        .container{
+            display: inline-block;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        function go(){
+            location.href = "q1.html";
+        }
+
+        function loginEx(){
+            tmp = document.getElementById("user_id").value;
+            if(tmp == "root" ){
+                result.innerHTML = "<font color=red>아이디 성공</font>";
+            }
+            else{
+                result.innerHTML = "<font color=red>아이디 실패</font>";
+            }
+            setTimeout(go,5000);
+            
+            console.log( document.getElementById("user_id").value)
+
+        }
+
+
+        function search1(){
+            tmp2 = document.getElementById("gisik").value;
+            location.href = "https://kin.naver.com?search/list.naver?query=" + tmp2;
+        }
+
+        function search2(){
+            tmp3 = document.getElementById("webtoon").value;
+            location.href = "https://comic.naver.com/search?keyword=" + tmp3;
+
+        }
+    </script>
+    
+        <div class="container">
+            <h2>아이디</h2>
+            <div id="result"></div>
+            <input type="text" id="user_id">
+            <button onclick="loginEx()">아이디체크</button>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>지식인 검색어</h2>
+            <input type="text" id="gisik">
+            <button onclick="search1()">지식인 검색</button>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>보고 싶은 웹툰 입력</h2>
+            <input type="text" id ="webtoon">
+            <button onclick="search2()">웹툰 검색</button>
+        </div>
+    
+
+    
+</body>
+</html>

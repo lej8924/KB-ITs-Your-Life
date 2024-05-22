@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline;
+        }
+        hr{
+            border: 1px solid red;
+        }
+        input{
+            background-color: yellow;
+        }
+        button{
+            background-color: greenyellow;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function pay(){
+            product = document.getElementById("product").value;
+            price = document.getElementById("price").value;
+            price = parseInt(price);
+            const selectElement = document.getElementById('mySelect');
+            const selectedIndex = selectElement.selectedIndex;
+            const selectedValue = selectElement.options[selectedIndex].value;
+            if(selectedValue == 1){
+                res.innerHTML = product + "에서 최종 결제금액: " + price;
+            }
+            else if(selectedValue == 2){
+                price += 1000;
+                res.innerHTML = product + "에서 최종 결제금액: " + price;
+            }
+            else if(selectedValue == 3){
+                price += 500;
+                res.innerHTML = product + "에서 최종 결제금액: " + price;
+            }
+
+            
+        }
+    </script>
+    <div>구매상점 입력: <input type="text" id ="product"></div>
+    <br>
+    <div>결제금액 입력: <input type="text" id="price"></div>
+    <hr>
+    <div>결제수단 선택: 
+        <select id="mySelect"> 
+            <option value="">선택하세요</option> 
+            <option value="1">계좌이체</option> 
+            <option value="2">신용카드</option> 
+            <option value="3">휴대폰 결제</option> 
+      </select>
+    </div>
+    <hr>
+    <button onclick="pay()">결제금액 계산</button>
+    <br>
+    <div id="res"></div>
+    
+
+</body>
+</html>

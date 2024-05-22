@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rev = 1;
+        let fin = '';
+        let cnt = 0;
+        arr1= new Array(14);
+        for(i = 0;i < 14;i++){
+            arr1[i] = 0
+        }
+        while(rev != 0){
+            rev = window.prompt("좌석번호 선택(1~14), 종료 0");
+            console.log(rev);
+            if(arr1[rev-1] == 1){
+                alert("이미 예약된 자리입니다.");
+            }
+            else if(rev == 0){
+                alert("예약 시스템을 종료합니다.");
+                break;
+            }
+            else{
+                arr1[rev-1] = 1;
+            }
+        }
+        for(i = 0;i < 14;i++){
+            if(arr1[i] == 1){
+                fin = fin + (i + 1) +' ';
+                cnt++;
+            }
+            else{
+            }
+        }
+        document.writeln("예약된 좌석 번호는 " +fin+"입니다. <br>");
+        document.writeln("예약 금액은 "+(cnt*5000)+"원");
+    </script>
+</body>
+</html>
