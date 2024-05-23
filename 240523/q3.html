@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script> -->
+</head>
+<body>
+    <div id = "app">
+        <input type="text" v-model="name">
+        <br />
+        입력하신 이름 : <span> {{ name }} </span>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return{
+                    name : ""
+                }
+            }
+        }
+        )
+        app.mount("#app");
+    </script>
+</body>
+</html>

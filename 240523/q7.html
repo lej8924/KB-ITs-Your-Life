@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <style>
+        table,td,th{
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        thead{
+            background-color: blueviolet;
+            color : yellow;
+        }
+        td{
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "app">
+        <table id = "table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>전화번호</th>
+                </tr>
+            </thead>
+            <tbody id="contacts">
+                <tr v-for="contact in contacts" :key="contact.no">
+                    <td>{{ contact.no }}</td>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.tel }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let contact_list = [
+            {no : 1011,name : "RM",tel:"010-3456-8299"},
+            {no : 1012,name : "정국",tel:"010-3456-8299"},
+            {no : 1013,name : "제이홉",tel:"010-3456-8299"},
+            {no : 1014,name : "슈가",tel:"010-3456-8299"}
+        ];
+
+        const app = Vue.createApp({
+            name : "App",
+            data(){
+                return{
+                    contacts : contact_list,
+                    pageno : 1,
+                    pagesize:4,
+                    totalcount:100
+                }
+            }
+        })
+        app.mount("#app")
+    </script>
+    
+</body>
+</html>

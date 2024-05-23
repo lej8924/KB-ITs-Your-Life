@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+    <div id ="app">
+        예금액:
+        <br>
+        <input type="text" v-model="cost">
+        <img src="https://cdn-icons-png.flaticon.com/128/87/87980.png" v-show="cost < 0" style="height : 15px; vertical-align:middle;">
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return{
+                    cost : ""
+                }
+            }
+        });
+        app.mount("#app");
+    </script>
+    
+</body>
+</html>
